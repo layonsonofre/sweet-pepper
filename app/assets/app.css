@@ -61,6 +61,8 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #fff;
   padding: 0px 1.5em;
   border-radius: 30px;
+  width: auto;
+  max-width: 115px;
 }
 
 .banner {
@@ -218,7 +220,7 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all 0.3s ease-in-out;
 }
 
-.button:hover {
+.button:hover:enabled {
   cursor: pointer;
   text-decoration: none;
   background: -webkit-linear-gradient(left, #ffc967, #ff8c67);
@@ -239,7 +241,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: linear-gradient(to right, #f1f1f1, #fff);
 }
 
-.button.flat:hover {
+.button.flat:hover:enabled {
   background-color: #f1f1f1;
   background: -webkit-linear-gradient(left, #fff, #f1f1f1);
   background: -moz-linear-gradient(left, #fff, #f1f1f1);
@@ -258,7 +260,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: linear-gradient(to right, #43A78B, #C5F061);
 }
 
-.button.submit:hover {
+.button.submit:hover:enabled {
   background-color: #43A78B;
   background: -webkit-linear-gradient(left, #C5F061, #43A78B);
   background: -moz-linear-gradient(left, #C5F061, #43A78B);
@@ -268,12 +270,19 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 0px 5px 15px rgba(67, 167, 139, 0.3);
 }
 
+.button:disabled, .button[disabled] {
+/* .button:disabled, .button[disabled], .button:disabled:hover, .button[disabled]:hover { */
+  cursor: not-allowed;
+  background: #eee;
+  color: #aaa;
+  box-shadow: none;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-bottom: 1em;
-  border-bottom: 1px solid #f0f0f0;
 }
 
 .input-container label {
@@ -282,13 +291,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .input-container input {
-  padding: 1em;
   height: 2em;
   line-height: 2em;
   border: none;
+  border-bottom: 1px solid #f0f0f0;
   background: transparent;
   color: #666;
   font-size: 1em;
+  transition: border-bottom 300ms ease-in-out;
 }
 
 .input-container input:focus {
@@ -297,6 +307,24 @@ h1, h2, h3, h4, h5, h6, p {
 
 .input-container input::placeholder {
   color: #f0f0f0;
+}
+
+.input-container input.ng-touched.ng-valid {
+  border-bottom: 1px solid #3F939B;
+}
+
+.input-container input.ng-touched.ng-invalid {
+  border-bottom: 1px solid #FF7B66;
+}
+
+.input-hints {
+  width: 100%;
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+.input-hints {
+  margin: 0.3em 0px;
 }
 
 .sweet-alert>div {
@@ -322,6 +350,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: unset;
   padding-bottom: unset;
 }
-.button > .material-icons, .action > .material-icons {
+
+.button>.material-icons, .action>.material-icons {
   vertical-align: middle;
 }

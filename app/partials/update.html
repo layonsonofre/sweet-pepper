@@ -2,23 +2,36 @@
 <form ng-submit="vm.submit()" name="form" novalidate>
   <div class="input-container">
     <label>Nome</label>
-    <input type="text" ng-model="vm.form.name" name="name" placeholder="Nome" autofocus>
+    <input type="text" ng-model="vm.form.name" name="name" placeholder="Nome" autofocus required>
+    <div ng-show="form.name.$touched" class="input-hints">
+      <span ng-show="form.name.$error.required">Campo obrigatório</span>
+    </div>
   </div>
   <div class="input-container">
     <label>Descrição</label>
-    <input type="text" ng-model="vm.form.description" name="description" placeholder="Descrição">
+    <input type="text" ng-model="vm.form.description" name="description" placeholder="Descrição" required>
+    <div ng-show="form.description.$touched" class="input-hints">
+      <span ng-show="form.description.$error.required">Campo obrigatório</span>
+    </div>
   </div>
   <div class="input-container">
     <label>Endereço da imagem</label>
-    <input type="text" ng-model="vm.form.imageUrl" name="imageUrl" placeholder="Endereço da imagem">
+    <input type="url" ng-model="vm.form.imageUrl" name="imageUrl" placeholder="Endereço da imagem" required>
+    <div ng-show="form.imageUrl.$touched" class="input-hints">
+      <span ng-show="form.imageUrl.$error.required">Campo obrigatório</span>
+      <span ng-show="form.imageUrl.$error.url">Endereço inválido</span>
+    </div>
   </div>
   <div class="input-container">
     <label>Valor</label>
-    <input type="text" ng-model="vm.form.price" name="price" placeholder="Valor" ui-mask="R$ 99,99" ui-mask-placeholder ui-mask-placeholder-char="0">
+    <input type="text" ng-model="vm.form.price" name="price" placeholder="Valor" ui-mask="R$ 99,99" ui-mask-placeholder ui-mask-placeholder-char="0" required>
+    <div ng-show="form.name.$touched" class="input-hints">
+      <span ng-show="form.name.$error.required">Campo obrigatório</span>
+    </div>
   </div>
   <div class="actions">
-    <button type="button" ng-click="vm.goBack()" class="button flat">Voltar</button>
-    <button type="reset" class="button reset" ng-hide="vm.tempItem">Limpar</button>
-    <button type="submit" class="button submit">{{vm.tempItem ? 'Atualizar' : 'Cadastrar'}}</button>
+    <button type="button" class="button flat" ng-click="vm.goBack()">Voltar</button>
+    <button type="reset" class="button reset" ng-click="vm.reset(form)" ng-hide="vm.tempItem">Limpar</button>
+    <button type="submit" class="button submit" ng-disabled="form.$invalid">{{vm.tempItem ? 'Atualizar' : 'Cadastrar'}}</button>
   </div>
 </form>

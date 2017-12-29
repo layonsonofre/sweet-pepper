@@ -26,7 +26,9 @@
       vm.form.price = vm.tempItem.price;
       dataStorage.setTempItem(null);
     }
+
     vm.submit = submit;
+    vm.reset = reset;
     vm.goBack = goBack;
 
     function submit() {
@@ -58,6 +60,13 @@
 
     function goBack() {
       $window.history.back();
+    }
+
+    function reset(form) {
+      if (form) {
+        form.$setPristine();
+        form.$setUntouched();
+      }
     }
   }
 })()
