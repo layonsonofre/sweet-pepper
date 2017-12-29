@@ -51,7 +51,9 @@
         dataStorage.addItem(temp);
         $location.path('/home');
       }
-      ngToast.warning({content: 'Os cupcakes disponíveis foram atualizados!'});
+      ngToast.warning({
+        content: 'Os cupcakes disponíveis foram atualizados!'
+      });
     }
 
     function goBack() {

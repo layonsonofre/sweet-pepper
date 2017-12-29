@@ -16,10 +16,10 @@
           .otherwise('/error');
 
         ngToastProvider.configure({
-          animation: 'fade'
-        , horizontalPosition: 'center'
-        , verticalPosition: 'bottom'
-        , additionalClasses: 'sweet-alert'
+          animation: 'fade',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+          additionalClasses: 'sweet-alert'
         });
       }
     ])

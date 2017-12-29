@@ -64,9 +64,11 @@
     function goBack() {
       $window.history.back();
     }
+
     function goHome() {
       $location.path('/home');
     }
+
     function goToCheckout() {
       $location.path('/checkout');
     }

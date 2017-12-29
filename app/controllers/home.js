@@ -35,7 +35,7 @@
         let included = false;
         for (var i = 0; i < temp.length; i++) {
           if (temp[i].item.name.toLowerCase()
-          .indexOf(item.name.toLowerCase()) > -1) {
+            .indexOf(item.name.toLowerCase()) > -1) {
             included = true;
           }
         }
@@ -43,7 +43,9 @@
           temp.push(entry)
         }
       }
-      ngToast.warning({content: 'Adicionamos uma doçura na sua cestinha!'});
+      ngToast.warning({
+        content: 'Adicionamos uma doçura na sua cestinha!'
+      });
       dataStorage.addToCart(temp);
     }
 

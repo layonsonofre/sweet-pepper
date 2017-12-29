@@ -34,7 +34,7 @@
     function getItems() {
       try {
         return JSON.parse($window.localStorage.items);
-      } catch(e) {
+      } catch (e) {
         return null;
       }
     }
@@ -46,7 +46,7 @@
     function getCartItems() {
       try {
         return JSON.parse($window.localStorage.cart);
-      } catch(e) {
+      } catch (e) {
         return null;
       }
     }
@@ -58,7 +58,7 @@
     function getTempItem() {
       try {
         return JSON.parse($window.localStorage.tempItem);
-      } catch(e) {
+      } catch (e) {
         return null;
       }
     }
