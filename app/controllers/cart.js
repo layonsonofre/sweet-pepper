@@ -56,8 +56,10 @@
 
     function getCartTotal() {
       vm.cartTotal = 0;
-      for (var i = 0; i < vm.cart.length; i++) {
-        vm.cartTotal += (vm.cart[i].item.price * vm.cart[i].quantity);
+      if (vm.cart && vm.cart.length > 0) {
+        for (var i = 0; i < vm.cart.length; i++) {
+          vm.cartTotal += (vm.cart[i].item.price * vm.cart[i].quantity);
+        }
       }
     }
 
