@@ -9,8 +9,8 @@
       <p class="info">{{item.description}}</p>
       <h3 class="title">{{(item.price / 100) | currency:"R$"}}</h3>
       <div class="actions">
-        <button type="button" class="button" ng-click="vm.delete(item.name)"><i class="material-icons">delete</i></button>
-        <button type="button" class="button flat" ng-click="vm.edit(item)"><i class="material-icons">edit</i></button>
+        <button type="button" class="button" ng-click="vm.delete(item.name)"><span class="material-icons">delete</span></button>
+        <button type="button" class="button flat" ng-click="vm.edit(item)"><span class="material-icons">edit</span></button>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
 <div class="padding" ng-show="!vm.items || vm.items.length === 0">
   <div class="flavour">
     <h3>Nenhum cupcake está cadastrado :-(</h3>
-    <i class="material-icons big-icon">sentiment_dissatisfied</i>
+    <span class="material-icons big-icon">sentiment_dissatisfied</span>
     <p>Clique no botão abaixo para cadastrar alguns produtos</p>
     <button type="button" ng-click="vm.goToUpdate()" class="button">Adicionar</button>
   </div>

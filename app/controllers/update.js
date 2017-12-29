@@ -24,6 +24,7 @@
       vm.form.description = vm.tempItem.description;
       vm.form.imageUrl = vm.tempItem.imageUrl;
       vm.form.price = vm.tempItem.price;
+      console.log(vm.tempItem);
       dataStorage.setTempItem(null);
     }
     vm.submit = submit;

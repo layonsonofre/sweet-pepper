@@ -10,9 +10,9 @@
         <h3 class="title">{{((item.quantity * item.item.price) / 100) | currency:"R$"}}</h3>
         <p class="info"><strong>{{item.quantity}}</strong> unidade(s)</p>
         <div>
-          <button type="button" class="button flat" ng-click="vm.decrease(item, true)" ng-show="item.quantity > 1"><i class="material-icons">remove</i></button>
-          <button type="button" class="button flat" ng-click="vm.decrease(item, false)"><i class="material-icons">add</i></button>
-          <button type="button" class="button" ng-click="vm.delete(item)"><i class="material-icons">delete</i></button>
+          <button type="button" class="button flat" ng-click="vm.decrease(item, true)" ng-show="item.quantity > 1"><span class="material-icons">remove</span></button>
+          <button type="button" class="button flat" ng-click="vm.decrease(item, false)"><span class="material-icons">add</span></button>
+          <button type="button" class="button" ng-click="vm.delete(item)"><span class="material-icons">delete</span></button>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
 <div class="padding" ng-show="!vm.cart || vm.cart.length === 0">
   <div class="flavour">
     <h3>Sua cestinha está vazia :-(</h3>
-    <i class="material-icons big-icon">shopping_basket</i>
+    <span class="material-icons big-icon">shopping_basket</span>
     <p>Clique no botão abaixo para cadastrar alguns produtos</p>
     <button type="button" ng-click="vm.goHome()" class="button">Comprar</button>
   </div>

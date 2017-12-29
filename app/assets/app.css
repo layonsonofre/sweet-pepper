@@ -196,6 +196,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -315,4 +316,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 0.8em;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.button, .action {
+  padding-top: unset;
+  padding-bottom: unset;
+}
+.button > .material-icons, .action > .material-icons {
+  vertical-align: middle;
 }

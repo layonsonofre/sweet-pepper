@@ -70,6 +70,7 @@
     }
 
     function goToCheckout() {
+      dataStorage.addToCart(null);
       $location.path('/checkout');
     }
   }
