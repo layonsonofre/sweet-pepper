@@ -11,9 +11,7 @@
     "angular-animate": "^1.6.8",
     "angular-aria": "^1.6.8",
     "angular-messages": "^1.6.8",
-    "angular-ui-mask": "^1.8.7",
-    "angular1-text-mask": "^6.0.1",
-    "text-mask-addons": "^3.7.1"
+    "angular-ui-mask": "^1.8.7"
   },
   "scripts": {
     "serve": "watch-http-server -a localhost -p 4200 ."

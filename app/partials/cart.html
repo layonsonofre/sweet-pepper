@@ -23,7 +23,11 @@
     <button type="button" ng-click="vm.goToCheckout()" class="button submit">Pagar</button>
   </div>
 </div>
-<div ng-show="!vm.cart || vm.cart.length === 0">
-  <h1>Empty</h1>
-  <button type="button" ng-click="vm.goHome()" class="button">Comprar</button>
+<div  class="padding" ng-show="!vm.cart || vm.cart.length === 0">
+  <div class="flavour">
+    <h3>Sua cestinha está vazia :-(</h3>
+    <i class="material-icons big-icon">shopping_basket</i>
+    <p>Clique no botão abaixo para cadastrar alguns produtos</p>
+    <button type="button" ng-click="vm.goHome()" class="button">Comprar</button>
+  </div>
 </div>

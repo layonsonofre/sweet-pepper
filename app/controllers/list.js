@@ -22,6 +22,7 @@
 
     vm.delete = deleteItem;
     vm.edit = editItem;
+    vm.goToUpdate = goToUpdate;
     vm.goBack = goBack;
 
     function deleteItem(item) {
@@ -42,6 +43,10 @@
 
     function goBack() {
       $window.history.back();
+    }
+
+    function goToUpdate() {
+      $location.path('/update');
     }
   }
 })()

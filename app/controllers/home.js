@@ -18,6 +18,7 @@
   function HomeController($rootScope, dataStorage, $location) {
     var vm = this;
     vm.items = dataStorage.getItems();
+    vm.goToUpdate = goToUpdate;
 
     vm.addToCart = addToCart;
 
@@ -43,6 +44,10 @@
         }
       }
       dataStorage.addToCart(temp);
+    }
+
+    function goToUpdate() {
+      $location.path('/update');
     }
   }
 })()

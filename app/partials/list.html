@@ -1,5 +1,5 @@
 <h1>Ítens disponíveis</h1>
-<div class="grid" ng-show="vm.items">
+<div class="grid" ng-show="vm.items && vm.items.length > 0">
   <div class="flavour" ng-repeat="item in vm.items">
     <div class="image">
       <img ng-src="{{item.imageUrl}}" alt="{{item.name}}" title="{{item.name}} / {{item.description}}">
@@ -15,4 +15,14 @@
     </div>
   </div>
 </div>
+
+<div class="padding" ng-show="!vm.items || vm.items.length === 0">
+  <div class="flavour">
+    <h3>Nenhum cupcake está cadastrado :-(</h3>
+    <i class="material-icons big-icon">sentiment_dissatisfied</i>
+    <p>Clique no botão abaixo para cadastrar alguns produtos</p>
+    <button type="button" ng-click="vm.goToUpdate()" class="button">Adicionar</button>
+  </div>
+</div>
+
 <button type="button" ng-click="vm.goBack()" class="button flat">Voltar</button>
