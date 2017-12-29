@@ -13,9 +13,9 @@
     }])
     .controller('UpdateController', UpdateController);
 
-  UpdateController.$inject = ['$window', '$rootScope', 'dataStorage', '$location'];
+  UpdateController.$inject = ['$window', '$rootScope', 'dataStorage', '$location', 'ngToast'];
 
-  function UpdateController($window, $rootScope, dataStorage, $location) {
+  function UpdateController($window, $rootScope, dataStorage, $location, ngToast) {
     var vm = this;
     vm.tempItem = dataStorage.getTempItem();
     vm.form = {};
@@ -51,6 +51,7 @@
         dataStorage.addItem(temp);
         $location.path('/home');
       }
+      ngToast.warning({content: 'Os cupcakes disponíveis foram atualizados!'});
     }
 
     function goBack() {

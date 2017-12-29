@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
   text-decoration: none;
 }
+.action:hover, .action:visited {
+  color: #fff;
+  text-decoration: none;
+}
 
 .banner {
   height: 50vh;
@@ -177,7 +181,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .flavour .description .title {
-  font-size: 0.9em;
   color: #ffc967;
 }
 .flavour .description .button {
@@ -292,4 +295,22 @@ h1, h2, h3, h4, h5, h6, p {
 
 .input-container input::placeholder {
   color: #f0f0f0;
+}
+
+.sweet-alert > div {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 140, 103, 0.4);
+  background-color: rgba(255, 140, 103, 0.9);
+  background: -webkit-linear-gradient(left, rgba(255, 140, 103, 0.9), rgba(255, 201, 103, 0.9));
+  background: -moz-linear-gradient(left, rgba(255, 140, 103, 0.9), rgba(255, 201, 103, 0.9));
+  background: -ms-linear-gradient(left, rgba(255, 140, 103, 0.9), rgba(255, 201, 103, 0.9));
+  background: -o-linear-gradient(left, rgba(255, 140, 103, 0.9), rgba(255, 201, 103, 0.9));
+  background: linear-gradient(to right, rgba(255, 140, 103, 0.9), rgba(255, 201, 103, 0.9));
+}
+.sweet-alert > div > span {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
 }

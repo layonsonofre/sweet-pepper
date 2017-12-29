@@ -13,9 +13,9 @@
     }])
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['$rootScope', 'dataStorage', '$location'];
+  HomeController.$inject = ['$rootScope', 'dataStorage', '$location', 'ngToast'];
 
-  function HomeController($rootScope, dataStorage, $location) {
+  function HomeController($rootScope, dataStorage, $location, ngToast) {
     var vm = this;
     vm.items = dataStorage.getItems();
     vm.goToUpdate = goToUpdate;
@@ -43,6 +43,7 @@
           temp.push(entry)
         }
       }
+      ngToast.warning({content: 'Adicionamos uma doçura na sua cestinha!'});
       dataStorage.addToCart(temp);
     }
 
