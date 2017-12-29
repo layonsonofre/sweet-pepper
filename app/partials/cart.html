@@ -1,0 +1,29 @@
+<h1>Cestinha de Cupcakes</h1>
+<div ng-show="vm.cart && vm.cart.length > 0">
+  <div class="grid">
+    <div class="flavour" ng-repeat="item in vm.cart">
+      <div class="image">
+        <img ng-src="{{item.item.imageUrl}}" alt="{{item.item.name}}" title="{{item.item.name}} / {{item.item.description}}">
+      </div>
+      <div class="description">
+        <h3 class="title">{{item.item.name}}</h3>
+        <h3 class="title">{{((item.quantity * item.item.price) / 100) | currency:"R$"}}</h3>
+        <p class="info"><strong>{{item.quantity}}</strong> unidade(s)</p>
+        <div>
+          <button type="button" class="button flat" ng-click="vm.decrease(item, true)" ng-show="item.quantity > 1"><i class="material-icons">remove</i></button>
+          <button type="button" class="button flat" ng-click="vm.decrease(item, false)"><i class="material-icons">add</i></button>
+          <button type="button" class="button" ng-click="vm.delete(item)"><i class="material-icons">delete</i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Total: {{(vm.cartTotal / 100) | currency:"R$"}}</h2>
+  <div class="actions">
+    <button type="button" ng-click="vm.goBack()" class="button flat">Quero Mais!</button>
+    <button type="button" ng-click="vm.goToCheckout()" class="button submit">Pagar</button>
+  </div>
+</div>
+<div ng-show="!vm.cart || vm.cart.length === 0">
+  <h1>Empty</h1>
+  <button type="button" ng-click="vm.goHome()" class="button">Comprar</button>
+</div>

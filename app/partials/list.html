@@ -1,0 +1,18 @@
+<h1>Ítens disponíveis</h1>
+<div class="grid" ng-show="vm.items">
+  <div class="flavour" ng-repeat="item in vm.items">
+    <div class="image">
+      <img ng-src="{{item.imageUrl}}" alt="{{item.name}}" title="{{item.name}} / {{item.description}}">
+    </div>
+    <div class="description">
+      <h3 class="title">{{item.name}}</h3>
+      <p class="info">{{item.description}}</p>
+      <h3 class="title">{{(item.price / 100) | currency:"R$"}}</h3>
+      <div class="actions">
+        <button type="button" class="button" ng-click="vm.delete(item.name)"><i class="material-icons">delete</i></button>
+        <button type="button" class="button flat" ng-click="vm.edit(item)"><i class="material-icons">edit</i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" ng-click="vm.goBack()" class="button flat">Voltar</button>
