@@ -18,7 +18,7 @@
   </div>
   <div class="actions">
     <button type="button" ng-click="vm.goBack()" class="button flat">Voltar</button>
-    <button type="reset" class="button reset">Limpar</button>
-    <button type="submit" class="button submit">Cadastrar</button>
+    <button type="reset" class="button reset" ng-hide="vm.tempItem">Limpar</button>
+    <button type="submit" class="button submit">{{vm.tempItem ? 'Atualizar' : 'Cadastrar'}}</button>
   </div>
 </form>

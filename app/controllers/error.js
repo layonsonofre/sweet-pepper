@@ -13,10 +13,14 @@
     }])
     .controller('ErrorController', ErrorController);
 
-  ErrorController.$inject = ['$rootScope'];
+  ErrorController.$inject = ['$rootScope', '$location'];
 
-  function ErrorController($rootScope) {
+  function ErrorController($rootScope, $location) {
     var vm = this;
-    vm.message = 'testando aqui';
+    vm.goHome = goHome;
+
+    function goHome() {
+      $location.path('/home');
+    }
   }
 })()

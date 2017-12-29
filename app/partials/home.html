@@ -7,7 +7,7 @@
       <h3 class="title">{{item.name}}</h3>
       <p class="info">{{item.description}}</p>
       <h3 class="title">{{(item.price / 100) | currency:"R$"}}</h3>
-      <button type="button" class="button">Eu quero esse!</button>
+      <button type="button" class="button" ng-click="vm.addToCart(item)">Eu quero esse!</button>
     </div>
   </div>
 </div>

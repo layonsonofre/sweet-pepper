@@ -3,7 +3,7 @@
 
   angular
     .module('SweetPepper', [
-      'ngRoute', 'Home', 'Update', 'Error', 'ui.mask', 'dataStorageService'
+      'ngRoute', 'Home', 'Update', 'List', 'Error', 'Cart', 'Checkout', 'ui.mask', 'dataStorageService'
     ])
     .config(['$routeProvider', '$locationProvider',
       function($routeProvider, $locationProvider) {

@@ -16,11 +16,14 @@
     dataStorage.getItems = getItems;
     dataStorage.addToCart = addToCart;
     dataStorage.getCartItems = getCartItems;
+    dataStorage.setTempItem = setTempItem;
+    dataStorage.getTempItem = getTempItem;
 
     return dataStorage;
 
     function cleanUp() {
       $window.localStorage.items = null;
+      $window.localStorage.tempItem = null;
       $window.localStorage.cart = null;
     }
 
@@ -43,6 +46,18 @@
     function getCartItems() {
       try {
         return JSON.parse($window.localStorage.cart);
+      } catch(e) {
+        return null;
+      }
+    }
+
+    function setTempItem(entry) {
+      $window.localStorage.tempItem = JSON.stringify(entry);
+    }
+
+    function getTempItem() {
+      try {
+        return JSON.parse($window.localStorage.tempItem);
       } catch(e) {
         return null;
       }
