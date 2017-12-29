@@ -1,12 +1,20 @@
 <h1>Atualizar ítens disponíveis</h1>
 <form ng-submit="vm.submit()" name="form" novalidate>
   <div class="input-container">
-    <label>Field</label>
-    <input type="text" ng-model="vm.form.field" name="field" placeholder="Field">
+    <label>Nome</label>
+    <input type="text" ng-model="vm.form.name" name="name" placeholder="Nome" autofocus>
   </div>
   <div class="input-container">
-    <label>Field</label>
-    <input type="text" ng-model="vm.form.field" name="field" placeholder="Field">
+    <label>Descrição</label>
+    <input type="text" ng-model="vm.form.description" name="description" placeholder="Descrição">
+  </div>
+  <div class="input-container">
+    <label>Endereço da imagem</label>
+    <input type="text" ng-model="vm.form.imageUrl" name="imageUrl" placeholder="Endereço da imagem">
+  </div>
+  <div class="input-container">
+    <label>Valor</label>
+    <input type="text" ng-model="vm.form.price" name="price" placeholder="Valor" ui-mask="R$ 999999,99"  ui-mask-placeholder ui-mask-placeholder-char="_">
   </div>
   <div class="actions">
     <button type="button" ng-click="vm.goBack()" class="button flat">Voltar</button>

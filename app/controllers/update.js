@@ -13,15 +13,24 @@
     }])
     .controller('UpdateController', UpdateController);
 
-  UpdateController.$inject = ['$rootScope', 'dataStorage', '$location'];
+  UpdateController.$inject = ['$window', '$rootScope', 'dataStorage', '$location'];
 
-  function UpdateController($rootScope, dataStorage, $location) {
+  function UpdateController($window, $rootScope, dataStorage, $location) {
     var vm = this;
     vm.form = {};
     vm.submit = submit;
+    vm.goBack = goBack;
 
     function submit() {
       console.log(vm.form);
+      let temp = dataStorage.getItems();
+      if (!temp || !temp.length) {
+        temp = [];
+      }
+      temp.push(vm.form);
+      dataStorage.addItem(temp);
+      console.log(dataStorage.getItems());
+      $location.path('/home');
     }
 
     function goBack() {

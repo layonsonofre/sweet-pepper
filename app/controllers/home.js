@@ -17,6 +17,6 @@
 
   function HomeController($rootScope, dataStorage, $location) {
     var vm = this;
-    vm.message = 'testando aqui';
+    vm.items = dataStorage.getItems();
   }
 })()
