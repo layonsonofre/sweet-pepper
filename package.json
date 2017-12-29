@@ -1,0 +1,28 @@
+{
+  "name": "sweet-pepper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Test",
+  "devDependencies": {
+    "watch-http-server": "^0.7.6"
+  },
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-aria": "^1.6.8",
+    "angular-messages": "^1.6.8"
+  },
+  "scripts": {
+    "serve": "watch-http-server -a localhost -p 4200 ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/layonsonofre/sweet-pepper.git"
+  },
+  "author": "Layon de Souza Onofre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/layonsonofre/sweet-pepper/issues"
+  },
+  "homepage": "https://github.com/layonsonofre/sweet-pepper#readme"
+}
