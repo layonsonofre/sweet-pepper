@@ -4,7 +4,7 @@
   angular
     .module('SweetPepper', [
       'ngRoute', 'Home', 'Update', 'List', 'Error', 'Cart', 'Checkout',
-      'ngToast', 'ui.mask', 'dataStorageService'
+      'ngToast', 'Index', 'ui.mask', 'dataStorageService'
     ])
     .config(['$routeProvider', '$locationProvider', 'ngToastProvider',
       function($routeProvider, $locationProvider, ngToastProvider) {

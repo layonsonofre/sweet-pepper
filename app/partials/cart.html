@@ -1,4 +1,4 @@
-<h1>Cestinha de Cupcakes</h1>
+<h2>Cestinha de Cupcakes</h2>
 <div ng-show="vm.cart && vm.cart.length > 0">
   <div class="grid">
     <div class="flavour" ng-repeat="item in vm.cart">
@@ -18,7 +18,7 @@
     </div>
   </div>
   <h2>Total: {{(vm.cartTotal / 100) | currency:"R$"}}</h2>
-  <div class="actions">
+  <div class="actions right">
     <button type="button" ng-click="vm.goBack()" class="button flat">Quero Mais!</button>
     <button type="button" ng-click="vm.goToCheckout()" class="button submit">Pagar</button>
   </div>

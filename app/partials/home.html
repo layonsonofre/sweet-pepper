@@ -1,5 +1,6 @@
 <div class="grid" ng-show="vm.items">
   <div class="flavour" ng-repeat="item in vm.items">
+    <h1>{{vm.dataStorage.cartCounter}}</h1>
     <div class="image">
       <img ng-src="{{item.imageUrl}}" alt="{{item.name}}" title="{{item.name}} / {{item.description}}">
     </div>
@@ -7,7 +8,9 @@
       <h3 class="title">{{item.name}}</h3>
       <p class="info">{{item.description}}</p>
       <h3 class="title">{{(item.price / 100) | currency:"R$"}}</h3>
-      <button type="button" class="button" ng-click="vm.addToCart(item)">Eu quero esse!</button>
+      <div class="actions">
+        <button type="button" class="button" ng-click="vm.addToCart(item)">Eu quero esse!</button>
+      </div>
     </div>
   </div>
 </div>

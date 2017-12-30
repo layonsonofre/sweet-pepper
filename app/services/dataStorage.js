@@ -9,6 +9,7 @@
 
   function dataStorage($window, $rootScope) {
     var dataStorage = {};
+    var counter = 0;
 
     dataStorage.cleanUp = cleanUp;
 
@@ -18,6 +19,10 @@
     dataStorage.getCartItems = getCartItems;
     dataStorage.setTempItem = setTempItem;
     dataStorage.getTempItem = getTempItem;
+
+    dataStorage.getCartCounter = function() {
+      return counter;
+    };
 
     return dataStorage;
 
@@ -41,6 +46,11 @@
 
     function addToCart(entry) {
       $window.localStorage.cart = JSON.stringify(entry);
+      if (entry) {
+        counter = entry.length;
+      } else {
+        counter = 0;
+      }
     }
 
     function getCartItems() {

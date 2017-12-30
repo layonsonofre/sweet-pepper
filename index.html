@@ -16,7 +16,7 @@
   <link rel='shortcut icon' type='image/png' href='/favicon.png' />
 </head>
 
-<body  ng-model-options="{ updateOn: 'keyup blur', debounce: { keyup: 250, blur: 0 } }">
+<body ng-controller="IndexController as vm" ng-model-options="{ updateOn: 'keyup blur', debounce: { keyup: 250, blur: 0 } }">
   <toast></toast>
   <div class="banner">
     <img src="./app/assets/logo-pimenta-doce-full.png">
@@ -25,9 +25,10 @@
     <a href="#!/home" class="action logo">
       <img src="./app/assets/logo-pimenta-doce-horizontal.png">
     </a>
-    <div class="actions">
+    <div class="header-actions">
       <a href="#!/cart" class="action">
         <span class="material-icons">shopping_cart</span>
+        <span class="cart-badge" ng-show="vm.cartCounter() > 0">{{vm.cartCounter()}}<span>
       </a>
       <a href="#!/list" class="action">
         <span class="material-icons">list</span>
@@ -53,6 +54,7 @@
 
   <script src="./app/app.js"></script>
   <script src="./app/services/dataStorage.js"></script>
+  <script src="./app/controllers/index.js"></script>
   <script src="./app/controllers/error.js"></script>
   <script src="./app/controllers/home.js"></script>
   <script src="./app/controllers/update.js"></script>
