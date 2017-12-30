@@ -76,9 +76,29 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   overflow: hidden;
   background-image: url("./background.jpg");
+  background-image: url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2986651/7000/4667/m1/fpnw/wm1/yummy_background1-.jpg?1500317852&s=a413b946441dfcebbe925dc3fa15da3c");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  /* background-color: #ddd;
+  background: -webkit-linear-gradient(left, #ddd, #fff);
+  background: -moz-linear-gradient(left, #ddd, #fff);
+  background: -ms-linear-gradient(left, #ddd, #fff);
+  background: -o-linear-gradient(left, #ddd, #fff);
+  background: linear-gradient(to right, #ddd, #fff); */
+  /* background-color: #ff8c67;
+  background: -webkit-linear-gradient(left, #ff8c67, #ffc967);
+  background: -moz-linear-gradient(left, #ff8c67, #ffc967);
+  background: -ms-linear-gradient(left, #ff8c67, #ffc967);
+  background: -o-linear-gradient(left, #ff8c67, #ffc967);
+  background: linear-gradient(to right, #ff8c67, #ffc967); */
+  background-color: #CEF3F2;
+  background: -webkit-linear-gradient(left, #CEF3F2, #D6F9D4);
+  background: -moz-linear-gradient(left, #CEF3F2, #D6F9D4);
+  background: -ms-linear-gradient(left, #CEF3F2, #D6F9D4);
+  background: -o-linear-gradient(left, #CEF3F2, #D6F9D4);
+  background: linear-gradient(to right, #CEF3F2, #D6F9D4);
 }
 
 .header {
